@@ -17,7 +17,7 @@ int x2 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Y2: ");
 int y2 = Convert.ToInt32(Console.ReadLine());
 
-double result = Math.Squr(Math.Pow((x1 - x2), 2) + Math.Pow((y1 - y2), 2));
-Console.WriteLine(Math.Round(result), 2);
+double result = Math.Sqrt(Math.Pow((x1 - x2), 2) + Math.Pow((y1 - y2), 2));
+Console.WriteLine(Math.Round(result, 2));
 //double AB = Math.Sqrt(Math.Pow((xA - xB), 2) + Math.Pow((yA - yB), 2));
 //Console.WriteLine(Math.Round(AB, 2));
