@@ -19,16 +19,16 @@ int[] NewArray(int[] arr)
 {
     int size = 0;
     if (arr.Length % 2 == 0) size = arr.Length / 2;
-    else size = arr.Length / 2 + 1;
+    if (arr.Length % 2 != 0) size = arr.Length / 2 + 1;
     int[] multArr = new int[size];
-    //int j = 0;
-    // if (size % 2 > 0) multArr[size - 1] = arr(arr.Length / 2);
-    for (int i = 0; i < arr.Length / 2; i++)
+   
+           for (int i = 0; i < arr.Length / 2; i++)
     {
-        multArr[i] = arr[i] * arr[arr.Length - 1 - i];
-       // j++;
+        multArr[i] = arr[i] * arr[arr.Length - 1 - i];  
     }
-        return multArr;
+    //int j = ;
+    if (arr.Length % 2 != 0) multArr[size - 1] = arr[arr.Length / 2];
+    return multArr;
 }
 void PrintArray(int[] arr)
 {
@@ -36,10 +36,11 @@ void PrintArray(int[] arr)
     {
         if (i == 0) Console.Write("[");
         if (i < arr.Length - 1) Console.Write(arr[i] + ", ");
-        else Console.Write(arr[i] + "]\n");
+        else Console.Write(arr[i] + "]");
     }
 }
-int[] array = CreateArrayRndInt(7, 0, 10);
+int[] array = CreateArrayRndInt(9, 0, 10);
 PrintArray(array);
+Console.WriteLine();
 int[] newArr = NewArray(array);
 PrintArray(newArr);
